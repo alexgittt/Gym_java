@@ -27,6 +27,10 @@ public class SeleniumCommands {
     return until(ExpectedConditions.visibilityOfElementLocated(selector));
   }
 
+  public Boolean waitForAndGetNonVisibleElementLocated(By selector) {
+    return until(ExpectedConditions.invisibilityOfElementLocated(selector));
+  }
+
   public List<WebElement> waitForAndGetAllVisibleElementsLocated(By selector) {
     return until(ExpectedConditions.visibilityOfAllElementsLocatedBy(selector));
   }
