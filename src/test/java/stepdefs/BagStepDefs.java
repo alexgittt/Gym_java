@@ -71,6 +71,12 @@ public class BagStepDefs {
     @When("I add quantity {int}")
     public void IAddQuantity(int quantity) {
         bagPage.selectQuantity(quantity);
+
+        try {
+            Thread.sleep(5000); // 5000 milliseconds = 5 seconds
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Then("product quantity is increased to {string}")
